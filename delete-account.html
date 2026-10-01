@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<title>계정 삭제 요청</title>
+<style>
+  /* 개인정보 처리방침 페이지(privacy-policy.html)와 같은 색·카드 스타일을 그대로 써서 두 공개 페이지가 한 서비스처럼 보이게 한다. */
+  :root {
+    color-scheme: light;
+    --brand: #7c3aed;
+    --brand-soft: #f3e8ff;
+    --text-primary: #1a1a1a;
+    --text-secondary: #555555;
+    --bg: #f9f6ff;
+    --card-bg: #ffffff;
+    --border: #ececec;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo",
+      "Noto Sans KR", "Malgun Gothic", sans-serif;
+    line-height: 1.6;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* 모바일에서도 옆 여백이 충분히 남도록, 좌우 패딩은 컨테이너 하나에만 준다. */
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 20px 64px;
+  }
+
+  header {
+    margin-bottom: 24px;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0 0 8px;
+    color: var(--text-primary);
+  }
+
+  .updated-at {
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+
+  section {
+    margin-bottom: 24px;
+  }
+
+  section:last-child {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 10px;
+    color: var(--text-primary);
+  }
+
+  p {
+    margin: 0 0 8px;
+    font-size: 14px;
+    color: var(--text-secondary);
+  }
+
+  /* 앱 내 삭제 경로는 순서가 있는 단계라 ol을 쓰되, ul과 같은 들여쓰기를 맞춘다. */
+  ul,
+  ol {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  li {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+  }
+
+  li:last-child {
+    margin-bottom: 0;
+  }
+
+  strong {
+    color: var(--text-primary);
+  }
+
+  .contact-email {
+    color: var(--brand);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .contact-email:hover {
+    text-decoration: underline;
+  }
+
+  /* 데이터가 즉시 파기되지 않고 보관된다는 점은 사용자가 놓치면 안 되므로 목록과 분리된 강조 박스로 먼저 보여준다. */
+  .notice {
+    background: var(--brand-soft);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+  }
+
+  .notice p {
+    margin: 0;
+    color: var(--text-primary);
+  }
+
+  /* 아주 좁은 화면(구형 기기 등)에서 카드 패딩을 살짝 줄여 텍스트가 답답해 보이지 않게 한다. */
+  @media (max-width: 360px) {
+    .card {
+      padding: 18px;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>계정 삭제 요청</h1>
+      <div class="updated-at">앱 패키지: com.dvrpcsh.datingapp · 최종 수정일: 2026-10-01</div>
+    </header>
+
+    <div class="card">
+      <!-- 1) 앱을 쓸 수 있는 사용자는 앱 안의 탈퇴 경로가 가장 빠르므로 먼저 안내한다. -->
+      <section>
+        <h2>1. 앱에서 직접 삭제하기</h2>
+        <p>앱이 설치되어 있고 로그인할 수 있다면 앱 안에서 바로 계정을 삭제할 수 있습니다.</p>
+        <ol>
+          <li>앱 하단의 <strong>마이</strong> 탭으로 이동합니다.</li>
+          <li><strong>계정 관리 &gt; 회원 탈퇴</strong>를 누릅니다.</li>
+          <li><strong>완전히 탈퇴하기</strong>를 선택합니다. (Apple로 로그인한 경우 Apple 재인증 후 진행됩니다.)</li>
+        </ol>
+      </section>
+
+      <!-- 2) 앱을 지웠거나 로그인할 수 없는 사용자를 위한 경로 — 구글 플레이가 이 웹 경로를 요구하는 이유다. -->
+      <section>
+        <h2>2. 이메일로 삭제 요청하기</h2>
+        <p>앱을 삭제했거나 로그인할 수 없는 경우, 아래 이메일로 삭제를 요청할 수 있습니다.</p>
+        <p>
+          요청 이메일: <a class="contact-email" href="mailto:xoxoxmin1268@naver.com?subject=%EA%B3%84%EC%A0%95%20%EC%82%AD%EC%A0%9C%20%EC%9A%94%EC%B2%AD">xoxoxmin1268@naver.com</a>
+        </p>
+        <ul>
+          <li>메일 제목: <strong>계정 삭제 요청</strong></li>
+          <li>본문에 포함할 내용: 가입한 이메일 주소, 가입 방식(이메일 / Google / Apple)</li>
+          <li>본인 확인을 위해 가능하면 가입한 이메일 주소에서 메일을 보내 주세요. 본인 확인이 어려운 경우 추가 확인을 요청할 수 있습니다.</li>
+          <li>요청은 접수 후 영업일 기준 7일 이내에 처리하며, 처리 결과를 회신 메일로 알려 드립니다.</li>
+        </ul>
+      </section>
+
+      <!-- 3) 삭제 직후 사용자에게 실제로 일어나는 변화(UserService.withdraw의 동작)만 적는다. -->
+      <section>
+        <h2>3. 삭제 시 처리되는 내용</h2>
+        <ul>
+          <li>계정이 삭제 상태로 표시되며, 해당 계정으로 더 이상 로그인할 수 없습니다.</li>
+          <li>로그인되어 있던 모든 기기의 로그인 상태가 즉시 해제됩니다.</li>
+          <li>Apple로 로그인한 계정은 Apple 로그인 연결도 함께 해제됩니다.</li>
+          <li>삭제된 계정과 같은 이메일 주소로는 다시 가입할 수 없습니다.</li>
+        </ul>
+      </section>
+
+      <!-- 4) 데이터는 행을 지우지 않고 삭제 표시만 하는 방식이므로, 무엇이 남는지 숨기지 않고 밝힌다. -->
+      <section>
+        <h2>4. 보관되는 데이터</h2>
+        <div class="notice">
+          <p>계정을 삭제해도 데이터는 즉시 파기되지 않고, 삭제 표시가 된 상태로 보관됩니다.</p>
+        </div>
+        <ul>
+          <li>보관 항목: 계정 정보(이메일 주소, 계정 ID), 프로필 정보 및 사진, 매칭·좋아요 기록, 채팅 메시지, 결제 및 구매 이력</li>
+          <li>보관 목적: 부정 이용 방지, 분쟁 및 신고 대응, 관련 법령 준수</li>
+          <li>결제 및 계약 철회에 관한 기록은 전자상거래 등에서의 소비자보호에 관한 법률에 따라 5년간 보관합니다.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>5. 문의</h2>
+        <p>
+          이메일: <a class="contact-email" href="mailto:xoxoxmin1268@naver.com">xoxoxmin1268@naver.com</a>
+        </p>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
